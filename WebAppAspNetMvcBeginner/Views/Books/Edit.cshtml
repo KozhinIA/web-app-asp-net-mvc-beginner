@@ -1,0 +1,13 @@
+﻿@using WebAppAspNetMvcBeginner.Models
+@model Book
+
+<h3>Книга</h3>
+
+@using (Html.BeginForm("Edit", "Books", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+    @Html.EditorForModel()
+
+    <input type="submit" value="Сохранить" />
+    @Html.ActionLink("Отменить", "Index", "Books")
+}
